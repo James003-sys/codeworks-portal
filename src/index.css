@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #174C3C;
+  --primary-hover: #123C30;
+  --primary-supporting: #287052;
+  --primary-light: #E8F2EC;
+  --primary-pale: #D1E6DA;
+
+  --bg-page: #F5F7F5;
+  --surface-card: #FFFFFF;
+  --surface-subtle: #FAFBF9;
+  --border-subtle: #E4E9E5;
+  --border-strong: #CBD5CE;
+
+  --text-heading: #202923;
+  --text-body: #3A473E;
+  --text-muted: #647067;
+  --text-light: #8C9890;
+
+  --status-success: #15803D;
+  --status-success-bg: #DCFCE7;
+  --status-warning: #B45309;
+  --status-warning-bg: #FEF3C7;
+  --status-error: #B91C1C;
+  --status-error-bg: #FEE2E2;
+  --status-info: #0369A1;
+  --status-info-bg: #E0F2FE;
+}
+
+@layer base {
+  * {
+    border-color: var(--border-subtle);
+  }
+
+  body {
+    background-color: var(--bg-page);
+    color: var(--text-body);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--text-heading);
+    font-weight: 600;
+    letter-spacing: -0.015em;
+  }
+
+  /* Custom focus state */
+  :focus-visible {
+    outline: 2px solid #287052;
+    outline-offset: 2px;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F0F4F1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5CE;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A4CDBC;
+}
+
+/* Interactive transitions */
+.transition-smooth {
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Code editor mock aesthetic */
+.code-window {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: #1E2522;
+  color: #E2E8E4;
+}
