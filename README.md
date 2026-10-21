@@ -173,18 +173,3 @@ Testing between roles can be done via the user profile dropdown in the top-right
 | **Admin** | **Faith Muthoni** | `faith.muthoni@codeworks.co.ke` | Codeworks Kenya (Nakuru Regional Hub) |
 | **Tutor** | **Dennis Kiprono** | `dennis.kiprono@codeworks.co.ke` | Codeworks Faculty (Lead Web Development Tutor) |
 | **Student** | **Kevin Ochieng** | `kevin.ochieng@nakuruhigh.ac.ke` | Nakuru High School (Grade 10 Senior Secondary) |
-
-*To reset local data changes back to initial state, click "Reset Data" in the top bar.*
-
----
-
-## Backend Integration
-
-The frontend is architected to decouple data access from presentation. To connect a live backend:
-
-1. Configure an environment variable in `.env`:
-   ```env
-   VITE_API_BASE_URL=http://localhost:5000/api/v1
-   ```
-2. Replace mock resolvers in `src/services/apiClient.ts` with standard `fetch` or `axios` calls pointing to your REST/GraphQL API.
-3. Update authentication in `src/context/AppContext.tsx` to use JWT tokens stored in `httpOnly` cookies or memory.
